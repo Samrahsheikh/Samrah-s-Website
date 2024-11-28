@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - The Samrah Diaries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">SAMRAH'S WEBSITE</div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Me</a></li>
+                    <li><a href="./project.html">Projects</a></li>
+                    <li><a href="./blog.html" class="active">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ai-generator">
+            <h2>Write Your Own Blog</h2>
+            <textarea id="ai-input" placeholder="Type your blog ideas here..."></textarea>
+            <button id="generate-button" aria-label="Generate Blog Idea">Generate Blog Idea</button>
+            <div class="generated-content" id="generated-content"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Samrah's Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('generate-button').addEventListener('click', function() {
+            const input = document.getElementById('ai-input').value;
+            // Echo back the input for now. Integrate an AI API as needed.
+            document.getElementById('generated-content').innerText = input ? `Generated Blog Idea: ${input}` : 'Please enter a blog idea.';
+        });
+    </script>
+</body>
+</html>
